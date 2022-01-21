@@ -1,0 +1,35 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 209659013475-sb08ag0l1ct3de4ulg09a3nbfpk5jcoq.apps.googleusercontent.com
+            client-secret: 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
+          kakao:
+            client-id: fa566365f546651d4760524d7620d71c
+            client-secret: V38zEmzxTNEocb72Iv7CsNgQDeZipm5E
+          naver:
+            client-id: 발급받은 client-id key
+            client-secret: 발급받은 client-secret key
+          facebook:
+            client-id: 발급받은 client-id key
+            client-secret: 발급받은 client-secret key
+  profiles:
+    include: oauth
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    url: jdbc:h2:tcp://localhost/~/test
+  jpa:
+    generate-ddl: 'true'
+    hibernate:
+      ddl-auto: create
+    show-sql: 'true'
+bezkoder:
+  app:
+    jwtExpirationMs: '60000'
+    jwtRefreshExpirationMs: '120000'
+    jwtSecret: bezKoderSecretKey
+
+
